@@ -1,0 +1,289 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f4f4f4;
+  color:#333;
+  line-height:1.6;
+  transition:0.4s;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#222;
+  color:white;
+  padding:15px 30px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  flex-wrap:wrap;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#00adb5;
+}
+
+/* ================= HOME ================= */
+
+#home{
+  background:linear-gradient(to right, #00adb5, #007b83);
+  color:white;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.profile-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:5px solid white;
+  margin-bottom:20px;
+}
+
+#home h1{
+  font-size:3rem;
+}
+
+.home-buttons{
+  margin-top:20px;
+}
+
+/* ================= BUTTONS ================= */
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:5px;
+  background:#222;
+  color:white;
+  cursor:pointer;
+  margin:5px;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#00adb5;
+  transform:scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  padding:80px 20px;
+  text-align:center;
+  background:#f4f4f4;
+}
+
+h2{
+  color:#00adb5;
+  margin-bottom:20px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-container{
+  max-width:800px;
+  margin:auto;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.skill-card{
+  background:white;
+  width:220px;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.skill-card:hover{
+  transform:translateY(-10px);
+}
+
+.skill-card i{
+  font-size:50px;
+  color:#00adb5;
+  margin-bottom:10px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card{
+  background:white;
+  width:320px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.card img{
+  width:100%;
+}
+
+/* ================= SERVICES ================= */
+
+.services-container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.service-box{
+  background:white;
+  width:250px;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ================= CONTACT ================= */
+
+form{
+  width:350px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+input,
+textarea{
+  margin:10px 0;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+textarea{
+  resize:none;
+  height:120px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode {
+  background: #121212 !important;
+  color: white !important;
+}
+
+body.dark-mode section {
+  background: #1a1a1a !important;
+}
+
+body.dark-mode nav {
+  background: #000 !important;
+}
+
+body.dark-mode footer {
+  background: #000 !important;
+}
+
+body.dark-mode #home {
+  background: linear-gradient(to right, #005a61, #003d42) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .skill-card,
+body.dark-mode .service-box {
+  background: #2a2a2a !important;
+  color: white !important;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #333 !important;
+  color: white !important;
+  border: 1px solid #555 !important;
+}
+
+body.dark-mode h2 {
+  color: #00adb5 !important;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+  }
+
+  nav ul{
+    flex-direction:column;
+    margin-top:10px;
+  }
+
+  #home h1{
+    font-size:2rem;
+  }
+
+  .projects-container,
+  .skills-container,
+  .services-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  form{
+    width:90%;
+  }
+}
+
